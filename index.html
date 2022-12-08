@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Copenhagen Body Extremes</title>
 </head>
 <body>
     <header>
+        <!--Navbar for Phone-->
         <nav>
-            <ul>
-                <img src="" alt="">
-                <li>Piercings</li>
-                <li>Body Modifications</li>
-                <li>Aftercare</li>
-                <li></li>
+            <ul class="topnav" id="myTopnav">
+                <a class="logo" href=""><img src="/images/logo_desktop.svg" alt="Logo"></a>
+                <li><a href="">Piercings</a></li>
+                <li><a href="">Body Modifications</a></li>
+                <li><a href="">Aftercare</a></li>
+                <li><a href="">Priser</a></li>
+                <li><a href="">Om os</a></li>
+                <a href=""><button  id="navbutton">Book en tid</button></a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </ul>
+  
+
         </nav>
     </header>
     <main>
@@ -26,5 +37,6 @@
 
     </footer>
 
+<script type="module" src="index.js"></script>
 </body>
 </html>
