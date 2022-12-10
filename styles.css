@@ -3,11 +3,14 @@
     --main-font-color: #F5F5F5;
     --contrast-color: #F2E422;
     --dark-accent-color: #0D0D0D;
+
+    
 }
 
 * {
     background-color: var(--background-color);
     color: var(--main-font-color);
+    font-family: 'Bitter', serif;
 
 }
 
@@ -16,7 +19,7 @@
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: var(--background-color);
-    overflow: hidden;
+    overflow: visible;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -28,11 +31,11 @@
   
   /* Style the hamburger menu */
   .topnav a.icon {
-    background: black;
-    display: block;
+    display: none;
     position: absolute;
     right: 0;
     top: 0;
+    height: 3vh;
   }
 
  
@@ -47,6 +50,10 @@
     color: var(--main-font-color);
     text-decoration: none;
     list-style: none;
+    font-family: "Bitter";
+    font-weight: 500;
+    font-size: 18px;
+
   }
   
   /* Change the color of links on hover */
@@ -75,9 +82,14 @@
   #navbutton {
     background-color: var(--contrast-color);
     color: var(--dark-accent-color);
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     padding: 16px 28px;
+    font-family: "Bitter";
+    text-transform: uppercase;
+    box-shadow: 7px 7px var(--main-font-color);
+    border: none;
+
   }
 
   #navbutton:hover {
@@ -85,9 +97,10 @@
     color: var(--contrast-color);
   }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 828px pixels wide, hide all links, except for logo. */
 @media screen and (max-width: 828px) {
     .topnav a:not(:first-child) {display: none;}
+    .topnav div {display: none;}
     .topnav a.icon {
       float: right;
       display: block;
@@ -95,7 +108,7 @@
   }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 828px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -122,54 +135,108 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    top: 40px;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    flex-direction: column;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: var(--main-font-color);
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
+    flex-direction: column;
   }
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ddd;
+    color: var(--contrast-color);
     display: block;
 }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
-  
-/* header {
+body {
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+
+body:after {
+    content: "";
+    display: block;
+    height: 340px;
+}
+
+
+/* FOOTER STYLING */
+
+footer {
+ /*    display: grid;
+    grid-template-rows: 1 2 1; */
+    margin-top: 100px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: wrap;
+  /*   display: grid;
+    grid-template-columns: 2fr 2fr 3fr; */
+    width: 100%;
+    z-index: 100;
+    bottom: 0;
+    overflow: hidden;
+    margin: 40px 0 10px 0;
+    justify-content: space-evenly;
+    
+}
+
+.footerlayout {
     position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    width: auto;
-    font-weight: 300;
-    font-size: .9em;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 13vh;
+    padding-top: 20px;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+.footer-links a {
+    color: var(--contrast-color);
+}
+
+.footer-contact p {
+    text-align: left;
+}
+
+.footer-contact p a {
+    color: var(--contrast-color);
+}
+
+.footer-openinghours p {
+    text-align: left;
+}
+
+.social-container {
     display: flex;
-    list-style-type: none;
 }
 
-header ul a {
-    padding: 10px;
+.social-container img {
+    padding: 0 10px 0 10px;
+    text-align: end;
 }
 
-nav a {
-    color: var(--main-font-color);
-    text-decoration: none;
-    list-style: none;
-} */
+.footer-logo img {
+    max-width: 80%;
+}

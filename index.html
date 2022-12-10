@@ -7,6 +7,9 @@
     <script type="module" src="index.js"></script>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Copenhagen Body Extremes</title>
 </head>
@@ -15,27 +18,134 @@
         <!--NAVBAR DESKTOP-->
         <div class="topnav" id="myTopnav">
             <a class="logo active" href=""><img src="/images/logo_desktop.svg" alt="Logo"></a>
-            <a href="" class="dropdown">Piercings</a>
+            <div class="dropdown">
+                <a href="">Piercings</a>
                 <div class="dropdown-content">
-                    <a href="">Piercings</a>
                     <a href="">Piercing af børn</a>
                     <a href="">FAQ</a>
                     <a href="">Galleri</a>
                 </div>
-            <a href="">Body Modifications</a>
+            </div>
+            <div class="dropdown">
+                <a href="">Body Modifications</a>
+                <div class="dropdown-content">
+                    <a href="">Scarification</a>
+                    <a href="">Body Suspension</a>
+                </div>
+            </div>
             <a href="">Aftercare</a>
             <a href="">Priser</a>
-            <a href="">Om os</a>
-            <a href=""><button  id="navbutton">Book en tid</button></a>
+            <div class="dropdown">
+                <a href="">Om os</a>
+                <div class="dropdown-content">
+                    <a href="">Om studiet</a>
+                    <a href="">Kontakt</a>
+                </div>
+            </div>
+            <a href="">FAQ</a>
+            <a href=""><button id="navbutton">Bestil en tid</button></a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
     </header>
     <main>
-    </main>
-    <footer>
+       <div class="welcome">
+            <div class="big-font">
+                <img src="/images/Mainfont.svg" alt="Copenhagen Body Extreme in outlined font">
+            </div>
+            <div class="main-buttons">
+                <button class="book-button"><a href="">Bestil en tid</a></button>
+                <button class="collection-button"><a href="">Se udvalg</a></button>
+            </div>
+       </div>
+       <div class="piercing-menu">
+            <a href="">
+                <div>
+                    <p>Torso</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <p>Mund</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <p>Øre</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <p>Ansigt/hoved</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <p>Vulva</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <p>Torso</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <p>Penis</p>
+                </div>
+            </a>
+       </div>
 
+       <div class="about-us-main">
+            <h2>Hvem er vi</h2>
+            <p>Tanken bag var, og er til den dag i dag, at være de bedste til vores håndværk, sætte den højeste standard indenfor industrien og yde den bedste kundeservice. 
+                For at kunne opfylde disse tanker, sørger hele teamet i butikken for løbende videreuddannelse, både gennem arrangementer vi selv arrangerer og gennem konferencer i udlandet, bland andet Association of Professionel Pierceres’s årlige konferance i Las Vegas, USA og BMXnet i Essen, Tyskland.
+            </p>
+            <button class="read-button"><a href="">Læs mere</a></button>
+        </div>
+
+        <div class="openinghours-box">
+            <p>Mandag - Fredag:</p>
+            <p>11:00 - 18:00 </p>
+            <p>Lørdag</p>
+            <p>11:00 - 16:00 </p>
+            <p>Søndag:</p>
+            <p>Lukket</p>
+            <p>Tlf: <a href="tel:+4533937666">+45 339 37 666</a></p>
+        </div>
+
+    </main> 
+    <footer class="footerlayout">
+        <h2>Danmarks mest toptunede studie med veluddannet og erfarent personale</h2>
+        <div class="footer">
+            <div class="footer-contact">
+                <p>Tlf: <a href="tel:+4533937666">+45 339 37 666</a></p>
+                <p>Email: <a href="mailto:contact@bodyextremes.com">contact@bodyextremes.com</a></p> 
+                <p>Adresse: Larsbjørnsstræde 15, 1454 København </p>
+            </div>
+            <div class="footer-logo">
+                <img src="/images/logo_desktop_footer.svg" alt="Logo">
+            </div>
+            <div class="footer-right">
+                <div  class="footer-openinghours">
+                    <p>Mandag - Fredag: 11:00 - 18:00 </p>
+                    <p>Lørdag: 11:00 - 16:00 </p>
+                    <p>Søndag: Lukket</p>
+                </div>
+                <div class="social-container"> 
+                  <img src="/images/insta.png" alt="Instagram Logo" height="38.5px" width="40px">
+                  <img src="/images/Icon.png" alt="Facebook Logo" height="43px" width="24px">
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <p><a href="">Om os</a></p>
+            <p><a href="">FAQ</a></p>
+            <p><a href="">CVR</a></p>
+            <p><a href="">Privatlivspolitik</a></p>
+        </div>
+        <p>Copenhagen Body Extremes 2022</p>
     </footer>
 
 </body>
