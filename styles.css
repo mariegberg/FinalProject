@@ -11,13 +11,27 @@
     background-color: var(--background-color);
     color: var(--main-font-color);
     font-family: 'Bitter', serif;
+
+    max-width: 1728px;
 }
 
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
+
+h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.body-text {
+    font-size: 14px;
+    line-height: 1.9;
+    word-wrap: break-word;
+    margin-bottom: 2vh;
+}
+
 
 /* NAVBAR STYLING */ 
 
@@ -177,7 +191,7 @@ body {
 
 
 .welcome {
-    margin: 0 10vh;
+    margin:10vh;
     display: flex;
     flex-direction: column;
 }
@@ -185,6 +199,7 @@ body {
 .main-buttons {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 5vh;
 }
 
 /* BUTTON STYLING */
@@ -194,7 +209,7 @@ body {
     color: var(--dark-accent-color);
     font-size: 18px;
     cursor: pointer;
-    padding: 16px 28px;
+    padding: 20px 65px;
     font-family: "Bitter";
     text-transform: uppercase;
     box-shadow: 7px 7px var(--main-font-color);
@@ -215,7 +230,7 @@ body {
     border: 1px solid var(--main-font-color);
     font-size: 18px;
     cursor: pointer;
-    padding: 16px 43px;
+    padding: 20px 65px;
     font-family: "Bitter";
     text-transform: uppercase;
     box-shadow: 7px 7px var(--main-font-color);
@@ -230,32 +245,79 @@ body {
     transform: translateY(4px);
   }
 
-/* PIERCING NAVIGATION BLOX */
+/* PIERCING NAVIGATION BLOCK */
 
 .piercing-menu {
-    width: 100vw;
-    height: 100vh;
-    padding: 100px;
+    margin: 10vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr;
-    grid-gap: 1em;
+    grid-template-rows:  1fr 1fr;
+    box-shadow: 15px 15px var(--main-font-color);
 }
 
 .navigation-tile {
     border: 1px solid var(--main-font-color);
-    width: 100%;
-    height: 100%;
+    height: 25vh;
+    width: auto;
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4em;
-    color: white;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 3em;
+    color: var(--main-font-color);
     background-repeat: no-repeat;
-    transition-duration: .3s;
+    transition-duration: .5s;
+    text-decoration: none;
 }
+
+.navigation-font {
+    margin-left: 2vh;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+/* ABOUT US SECTION - MAIN */
+.about-us-main {
+    text-align: center;
+    margin: 4vh 18vh;
+    font-weight: 400;
+}
+
+#button-space {
+    margin-top: 5vh;
+}
+
+/* OPENING HOURS BOX */
+.openinghours-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.openinghours-box {
+    background-color: #0D0D0D;
+    width: 60%;
+    border: 1px solid var(--main-font-color);
+    box-shadow: 15px 15px var(--main-font-color); 
+}
+
+.font-bold {
+    font-weight: 800;
+    
+}
+
+.link-font {
+    text-decoration: none;
+    color: var(--contrast-color);
+}
+
+.openinghours-box p{
+    background-color: #0D0D0D;
+}
+
 /* FOOTER STYLING */
 
 footer {
