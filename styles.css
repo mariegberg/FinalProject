@@ -306,7 +306,7 @@ body {
 
 .font-bold {
     font-weight: 800;
-    
+
 }
 
 .link-font {
@@ -316,6 +316,41 @@ body {
 
 .openinghours-box p{
     background-color: #0D0D0D;
+}
+
+/* GALLERY BOX STYLING */
+
+.gallery-container {
+    width: auto;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.gallery-box {
+    display: flex; 
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+    justify-content: center;
+}
+
+.gallery-box img {
+    width: 24vw;
+}
+
+#gallery-button {
+    position: relative;
+    right: -39%;
+}
+
+
+/* MAP AREA STYLING */
+
+.map-container {
+    text-align: center;
+}
+
+#google-map {
+    box-shadow: 15px 15px var(--main-font-color); 
 }
 
 /* FOOTER STYLING */
