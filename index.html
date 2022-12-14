@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/Nosering-up.svg">
-    <script type="module" src="index.js"></script>
+   
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,11 +37,34 @@
             <a href="">FAQ</a>
             <a href="about_us.html">Om os</a>
             <a href=""><button id="navbutton">Bestil en tid</button></a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <button class="burger_menu">
                 <i class="fa fa-bars"></i>
-            </a>
+            </button>
+        </div>
+
+        <!-- BURGER MENU MOBILE -->
+        <div class="burger_container">
+            <div class="dropdown_mobile">
+                <a href="piercing_overview.html">Piercings</a>
+                <div class="dropdown-content">
+                    <a href="not_available.html">Piercing af børn</a>
+                    <a href="not_available.html">Galleri</a>
+                </div>
+            </div>
+            <div class="dropdown_mobile">
+                <a href="bodymod.html">Body Modifications</a>
+                <div class="dropdown-content">
+                    <a href="not_available.html">Scarification</a>
+                    <a url="http://suspension.dk/">Body Suspension</a>
+                </div>
+            </div>
+            <a href="aftercare.html">Aftercare</a>
+            <a href="">FAQ</a>
+            <a href="about_us.html">Om os</a>
+            <a href=""><button class="book-button">Bestil en tid</button></a>
         </div>
     </header>
+    <div id="overlay-mobile-menu"></div>
     <main>
        <div class="welcome">
             <div class="big-font">
@@ -89,9 +112,11 @@
 
        <div class="about-us-main">
             <h2>Om os</h2>
-            <p class="body-text">Tanken bag var, og er til den dag i dag, at være de bedste til vores håndværk, sætte den højeste standard indenfor industrien og yde den bedste kundeservice. 
-            </p>
-            <p class="body-text">For at kunne opfylde disse tanker, sørger hele teamet i butikken for løbende videreuddannelse, både gennem arrangementer vi selv arrangerer og gennem konferencer i udlandet, bland andet Association of Professionel Pierceres’s årlige konferance i Las Vegas, USA og BMXnet i Essen, Tyskland.</p>
+            <div class="about-us-text">
+                <p class="body-text">Tanken bag var, og er til den dag i dag, at være de bedste til vores håndværk, sætte den højeste standard indenfor industrien og yde den bedste kundeservice. 
+                </p>
+                <p class="body-text">For at kunne opfylde disse tanker, sørger hele teamet i butikken for løbende videreuddannelse, både gennem arrangementer vi selv arrangerer og gennem konferencer i udlandet, bland andet Association of Professionel Pierceres’s årlige konferance i Las Vegas, USA og BMXnet i Essen, Tyskland.</p>
+            </div>
             <a href="/about_us.html"><button class="collection-button" id="button-space">Læs mere</button></a>
         </div>
 
@@ -100,10 +125,13 @@
             <div class="openinghours-box">
                 <p>Mandag - Fredag:</p>
                 <p class="font-bold">11:00 - 18:00 </p>
+                <br>
                 <p>Lørdag</p>
                 <p class="font-bold">11:00 - 16:00 </p>
+                <br>
                 <p>Søndag:</p>
                 <p class="font-bold">Lukket</p>
+                <br>
                 <p>Tlf: <a class="link-font" href="tel:+4533937666">+45 339 37 666</a></p>
             </div>
         </div>
@@ -121,7 +149,7 @@
 
         <div class="map-container">
             <h2>Find os</h2>
-                <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.609294989459!2d12.567152815658483!3d55.67839400519617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652530e24b83b91%3A0x2b71f6535af63865!2sCopenhagen%20Body%20Extremes!5e0!3m2!1sde!2sdk!4v1670871364052!5m2!1sde!2sdk" width="800" height="550" style="border:1 solid white;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.609294989459!2d12.567152815658483!3d55.67839400519617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652530e24b83b91%3A0x2b71f6535af63865!2sCopenhagen%20Body%20Extremes!5e0!3m2!1sde!2sdk!4v1670871364052!5m2!1sde!2sdk" width="768" height="550" style="border: 1px solid white;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </main> 
     <div class="spike">
@@ -159,5 +187,7 @@
             <p>Copenhagen Body Extremes 2022</p>
         </div>
     </footer>
+    <script type="module" src="index.js"></script>
 </body>
+
 </html>

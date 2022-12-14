@@ -11,6 +11,7 @@
     color: var(--main-font-color);
     font-family: 'Bitter', serif;
     max-width: 1728px;
+    text-decoration: none;
 }
 
 body {
@@ -47,7 +48,7 @@ h3 {
 }
 
 .body-text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
     word-wrap: break-word;
     margin-bottom: 2vh;
@@ -70,54 +71,42 @@ h3 {
   }
   
   
-  /* Style the hamburger menu */
-  .topnav a.icon {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 3vh;
-  }
+/* Style the links inside the navigation bar */
+.topnav a {
+   float: left;
+   display: block;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   color: var(--main-font-color);
+   text-decoration: none;
+   list-style: none;
+   font-family: "Bitter";
+   font-weight: 500;
+   font-size: 18px;
 
- 
- /* Style the links inside the navigation bar */
- .topnav a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: var(--main-font-color);
-    text-decoration: none;
-    list-style: none;
-    font-family: "Bitter";
-    font-weight: 500;
-    font-size: 18px;
-
-  }
+}
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    color: var(--contrast-color);
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-    color: var(--contrast-color);
-  }
-  
-  .topnav a:active {
-    color: var(--contrast-color);
-  } 
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: var(--contrast-color);
+}
 
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-    display: none;
-  }
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  color: var(--contrast-color);
+}
 
-  .topnav .logo {
-    margin-right: auto;
-  }
+.topnav a:active {
+  color: var(--contrast-color);
+} 
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+.topnav .logo {
+  margin-right: auto;
+}
 
   #navbutton {
     background-color: var(--contrast-color);
@@ -140,71 +129,102 @@ h3 {
     box-shadow: none;
   }
 
-/* When the screen is less than 828px pixels wide, hide all links, except for logo. */
-@media screen and (max-width: 828px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav div {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 828px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-
 
 /* Dropdown Button */
 
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 40px;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    flex-direction: column;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: var(--main-font-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    flex-direction: column;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    color: var(--contrast-color);
-    display: block;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 40px;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  flex-direction: column;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--main-font-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  flex-direction: column;
 }
   
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: var(--contrast-color);
+  display: block;
+}
   
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* BURGER MENU STYLING */
+.burger_menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  font-size: 50px;
+  background-color: transparent;
+  color: var(--contrast-color);
+  box-shadow: none
+}
+
+.top-mobile-view{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: var(--contrast-color);
+    box-shadow: none;
+}
+.top-mobile-view i{
+    font-size: 2em;
+}
+.top-mobile-view i:hover{
+    cursor: pointer;
+}
+
+.overlay_mobile_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 1.5s;
+}
+
+.burger_container {
+    display: none;
+}
+
+.burger_container.show {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 30px;
+}
+
+.burger-container.show div, .burger-container a{
+    margin: 10px 0;
+}
+
+#navbutton-mobile {
+    padding: 14px 27px;
+    font-size: 16px;
+    color: var(--dark-accent-color);
+    background-color: var(--contrast-color);
+}
+
 body {
     min-height: 100%;
     margin-bottom: -100px;
@@ -275,25 +295,6 @@ button {
     background-color: var(--dark-accent-color);
 }
 
-@media (min-width: 375px) {
-    .piercing-menu {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .navigation-font {
-        font-size: 1.5em;
-    }
-}
-
-@media (min-width: 900px) {
-    .piercing-menu {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .navigation-font {
-        font-size: 3em;
-    }
-}
-
 .navigation-tile {
     border: 1px solid var(--main-font-color);
     height: 25vh;
@@ -319,8 +320,16 @@ button {
 /* ABOUT US SECTION - MAIN */
 .about-us-main {
     text-align: center;
-    margin: 4vh 18vh;
+    margin: 4vh 8vh;
     font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us-text {
+    max-width: 600px;
+    text-align: start;
 }
 
 #button-space {
@@ -338,6 +347,7 @@ button {
 .openinghours-box {
     background-color: #0D0D0D;
     width: 60%;
+    padding: 21px 0;
     border: 1px solid var(--main-font-color);
     box-shadow: 15px 15px var(--main-font-color); 
 }
@@ -377,7 +387,7 @@ button {
 
 #gallery-button {
     position: relative;
-    right: -39%;
+    right: 0;
 }
 
 
@@ -385,6 +395,7 @@ button {
 
 .map-container {
     text-align: center;
+    margin-top: 20vh;
 }
 
 #google-map {
@@ -486,18 +497,23 @@ button {
     align-items: center;;
 }
 
-.hero-img {
-    box-shadow: 15px 15px var(--main-font-color); 
+.hero-img { 
     margin: 0 30px;
 }   
 
+.hero-img img {
+    box-shadow: 15px 15px var(--main-font-color);
+}
+
 .hero-right {
     padding: 0 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-arrow {
-    position: relative;
-    right: -40%;
+    margin-top: 50px;
 }
 
 /* GODE RÅD STYLING */
@@ -557,6 +573,18 @@ button {
 
 .piercing-card-content {
     height: 60%;
+}
+
+/* TIPS CONTAINER STYLING */
+.tips-container {
+    display: flex;
+    padding: 0 5vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.factbox1, .factbox2 {
+    margin: 0 5px;
 }
 
 /* FOOTER STYLING */
@@ -638,11 +666,103 @@ footer {
 
 /* MEDIA QUERIES */
 
+/* Desktop */
+@media (min-width: 769px) {
+    .piercing-menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .navigation-font {
+        font-size: 3em;
+    }
+    .burger_menu {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    h2 {
+      font-size: 25px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    button {
+        padding: 18px 44px;
+    }
+    .topnav a:not(:first-child) {display: none;}
+    .topnav div {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .piercing-menu {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10vh 3vh;
+        box-shadow: 7px 7px var(--main-font-color);
+    }
+    .navigation-font {
+        font-size: 2.5em;
+    }
+
+    .big-font img {
+        height: auto;
+        margin-top: 10px;
+    }
+    .about-us-main {
+        margin: 4vh 1vh;
+    }
+    .openinghours-box {
+        width: 80%;
+        box-shadow: 7px 7px var(--main-font-color);
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
+    .footer div {
+        margin: 10px 0;
+    }
+    #google-map {
+        width: 480px;
+    }
+    .burger_menu {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+    }
+    .hero-img {
+        width: auto;
+        box-shadow: none;
+        margin: 10px 0;
+        box-shadow: none;
+    }
+    .hero-right {
+        border: 1px solid var(--main-font-color);
+        margin-bottom: 20px;
+    }
+    .hero-img img {
+        box-shadow: none;
+    }
+
+    .hero-arrow {
+        display: none;
+    }
+    .fact-container {
+        flex-direction: column;
+        padding: 0 1vw;
+    }
+}
+
 /* Mobile */
 
 @media screen and (max-width: 480px) {
     h2 {
-      font-size: 18px;
+      font-size: 25px;
     }
     h3 {
         font-size: 18px
@@ -652,22 +772,29 @@ footer {
         padding: 13px 28px;
         box-shadow: 4px 4px var(--main-font-color);
     }
-}
-
-/* Tablet */
-@media screen and (max-width: 768px) {
-    h2 {
-      font-size: 20px;
+   .piercing-menu {
+        margin: 10vh 0;
+        box-shadow: none;
     }
-
-    h3 {
-        font-size: 20px;
+    .navigation-font {
+        font-size: 1.5em;
     }
-}
-
-/* Desktop */
-@media screen and (max-width: 1024px) {
-    .text {
-      font-size: 16px;
+    #google-map {
+        width: 320px;
     }
 }
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 828px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
