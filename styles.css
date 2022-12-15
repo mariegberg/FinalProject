@@ -556,6 +556,7 @@ button {
     height: 50%;
     opacity: 50%;
     right: 0;
+    pointer-events: none;
 }
 
 .spike2 {
@@ -631,10 +632,8 @@ button {
 /* FOOTER STYLING */
 
 footer {
-    /*    display: grid;
-       grid-template-rows: 1 2 1; */
-       margin-top: 300px;
-       
+    margin-top: 300px;
+    
 }
 
 .footerlayout::before {
@@ -648,6 +647,7 @@ footer {
     left: 0vh;
     top: -70%;
     opacity: 50%;
+    pointer-events: none;
 
 }
    
@@ -663,7 +663,6 @@ footer {
     margin: 40px 0 10px 0;
     justify-content: space-evenly;
     align-items: center;
-    
 }
 
 .footerlayout {
@@ -673,6 +672,8 @@ footer {
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
+    background-color: var(--background-color);
+    padding-top: 20px;
 }
 
 .footer-links {
@@ -851,7 +852,7 @@ position: relative;
     }
 
     .footerlayout {
-        margin-top: 200px;
+        margin-top: 50px;
     }
     .footer {
         flex-direction: column;
@@ -930,6 +931,7 @@ position: relative;
     #google-map {
         width: 320px;
     }
+
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
