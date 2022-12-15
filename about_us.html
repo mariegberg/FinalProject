@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="index.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/Nosering-up.svg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +18,7 @@
     <header>
         <!--NAVBAR DESKTOP-->
         <div class="topnav" id="myTopnav">
-            <a class="logo active" href=""><img src="/images/logo_desktop.svg" alt="Logo"></a>
+            <a class="logo active" href="index.html"><img src="/images/logo_desktop.svg" alt="Logo"></a>
             <div class="dropdown">
                 <a href="piercing_overview.html">Piercings</a>
                 <div class="dropdown-content">
@@ -29,20 +30,84 @@
                 <a href="bodymod.html">Body Modifications</a>
                 <div class="dropdown-content">
                     <a href="not_available.html">Scarification</a>
-                    <a href="http://suspension.dk/">Body Suspension</a>
+                    <a url="http://suspension.dk/">Body Suspension</a>
                 </div>
             </div>
             <a href="aftercare.html">Aftercare</a>
             <a href="">FAQ</a>
             <a href="about_us.html">Om os</a>
             <a href=""><button id="navbutton">Bestil en tid</button></a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <button class="burger_menu">
                 <i class="fa fa-bars"></i>
-            </a>
+            </button>
+        </div>
+        <!-- BURGER MENU MOBILE -->
+        <div class="burger_container">
+            <div class="dropdown_mobile">
+                <a href="piercing_overview.html">Piercings</a>
+                <div class="dropdown-content">
+                    <a href="not_available.html">Piercing af børn</a>
+                    <a href="not_available.html">Galleri</a>
+                </div>
+            </div>
+            <div class="dropdown_mobile">
+                <a href="bodymod.html">Body Modifications</a>
+                <div class="dropdown-content">
+                    <a href="not_available.html">Scarification</a>
+                    <a url="http://suspension.dk/">Body Suspension</a>
+                </div>
+            </div>
+            <a href="aftercare.html">Aftercare</a>
+            <a href="">FAQ</a>
+            <a href="about_us.html">Om os</a>
+            <a href=""><button class="book-button">Bestil en tid</button></a>
         </div>
     </header>
     <main>
+        <!-- BANNER SECTION -->
+        <section class="banner-section">
+            <div class="banner-container">
+                <div class="banner">
+                    <img class="first" src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                    <img src="/images/banner/Group-2.svg" alt="Piercing font banner">
+                    <span class="break"></span>
+                </div>
+            </div>
+        </section>
 
+        <div class="broken-page">
+            <div>
+                <img src="/images/broken.png" alt="Broken illustration of a needle">
+            </div>
+            <h1>Denne side er under udvikling</h1>
+            <p>Her kan du snart lære mere om studiet og hvem vi er.</p>
+            <p>Kom tilbage på et senere tidspunkt :-)</p>
+        </div>
     </main>
     <!-- FOOTER START -->
     <footer class="footerlayout">

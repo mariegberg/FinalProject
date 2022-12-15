@@ -10,7 +10,7 @@
 * {
     color: var(--main-font-color);
     font-family: 'Bitter', serif;
-    max-width: 1728px;
+    /* max-width: 1728px; */
     text-decoration: none;
 }
 
@@ -21,6 +21,9 @@ body {
     position: relative;
 }
 
+a {
+    z-index: 3;
+}
 
 body::before {
     content: "";
@@ -40,6 +43,7 @@ h2 {
     font-size: 48px;
     text-transform: uppercase;
     font-weight: "semibold";
+    text-align: center;
 }
 
 h3 {
@@ -57,6 +61,10 @@ h3 {
 
 
 /* NAVBAR STYLING */ 
+
+header {
+    position: relative;
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -107,6 +115,7 @@ h3 {
 }
 .topnav .logo {
   margin-right: auto;
+  padding: 7px;
 }
 
   #navbutton {
@@ -146,11 +155,12 @@ h3 {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  top: 40px;
-  border-bottom: 1px solid white;
+  top: 70px;
+/*   border-bottom: 1px solid white;
   border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-right: 1px solid white; */
   flex-direction: column;
+  background-color: var(--background-color);
 }
 
 /* Links inside the dropdown */
@@ -294,6 +304,7 @@ button {
     display: grid;
     box-shadow: 15px 15px var(--main-font-color);
     background-color: var(--dark-accent-color);
+    position: relative;
 }
 
 .navigation-tile {
@@ -351,6 +362,7 @@ button {
     padding: 21px 0;
     border: 1px solid var(--main-font-color);
     box-shadow: 15px 15px var(--main-font-color); 
+    position: relative;
 }
 
 .font-bold {
@@ -495,7 +507,8 @@ button {
 .hero {
     display: flex;
     flex-direction: row;
-    align-items: center;;
+    align-items: center;
+    margin: 10vh 0 25vh 0;
 }
 
 .hero-img { 
@@ -507,7 +520,7 @@ button {
 }
 
 .hero-right {
-    padding: 0 5vh;
+    padding: 0 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -524,14 +537,35 @@ button {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.fact {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 40px;
+}
+
+.fact img {
+    padding-right: 10px;
+}
+
 .spike {
     background-image: url(/images/spike.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
-    width: auto;
-    height: 20vh;
-    left: 10vh;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    opacity: 50%;
+    right: 0;
+}
+
+.spike2 {
+    background-image: url(/images/spike.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
 }
 
 /* .spike::before {
@@ -548,18 +582,18 @@ button {
 .piercing-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: var(--dark-accent-color);
-    box-shadow: 15px 15px var(--main-font-color);
-    margin: 0 20px;
+    margin: 0 30px;
+    position: relative;
 }
 
 .piercing-card {
-    flex-basis: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 500px;
     border: 1px solid var(--main-font-color);
+    margin: 30px 0;
+    background-color: var(--dark-accent-color);
 }
 
 .piercing-card-img {
@@ -572,6 +606,14 @@ button {
 
 .piercing-card-content {
     height: 60%;
+    padding: 0 20px;
+    position: relative;
+}
+
+.piercing-card-content button {
+    position: absolute;
+    bottom: 10%;
+    right: 27%;
 }
 
 /* TIPS CONTAINER STYLING */
@@ -591,8 +633,22 @@ button {
 footer {
     /*    display: grid;
        grid-template-rows: 1 2 1; */
-       margin-top: 100px;
+       margin-top: 300px;
        
+}
+
+.footerlayout::before {
+    content: "";
+    background-image: url(/images/spike.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0vh;
+    top: -70%;
+    opacity: 50%;
+
 }
    
 .footer {
@@ -616,6 +672,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .footer-links {
@@ -662,6 +719,69 @@ footer {
     max-width: 80%;
 }
 
+/* BROKEN PAGE/ DEVELOPMENT PAGE */
+
+.broken-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+/* FAQ PAGE STYLING */
+
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+position: relative;
+}
+
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    color: var(--main-font-color);
+    cursor: pointer;
+    padding: 25px 20px;
+    width: 80%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+    background-color: var(--dark-accent-color);
+    border: 1px solid var(--main-font-color);
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+    width: 80%; 
+    padding: auto;
+    
+}
+
+.faq-body p {
+    padding: 20px 60px;
+    line-height: 1.5;
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: var(--background-color);
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: var(--main-font-color);
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
 
 /* MEDIA QUERIES */
 
@@ -678,7 +798,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 1274px) {
+@media screen and (max-width: 1390px) {
+        .piercing-container {
+            margin: 0;
+        }
+}
+
+@media screen and (max-width: 1363px) {
     .piercing-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -689,6 +815,7 @@ footer {
 @media screen and (max-width: 768px) {
     h2 {
       font-size: 25px;
+      text-align: center;
     }
     h3 {
         font-size: 20px;
@@ -721,6 +848,10 @@ footer {
     .openinghours-box {
         width: 80%;
         box-shadow: 7px 7px var(--main-font-color);
+    }
+
+    .footerlayout {
+        margin-top: 200px;
     }
     .footer {
         flex-direction: column;
@@ -762,14 +893,17 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         padding: 0 1vw;
     }
-
+    .banner {
+        margin-bottom: 20px;
+    }
 
     
 }   
 
-@media screen and (max-width: 929px) {
+@media screen and (max-width: 908px) {
     .piercing-container {
         grid-template-columns: repeat(1, 1fr);
+        box-shadow: none;
     }
 }
 /* Mobile */
